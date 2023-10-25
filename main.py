@@ -8,7 +8,7 @@ import uvicorn
 
 
 
-app = FastAPI(title="Lista de Produtos")
+app = FastAPI(title="Lista de Produtos",version='0.0.1')
 
 
 
@@ -77,8 +77,3 @@ async def delete_produto(produto_id: int):
      else:
           raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail=f'produto ou id nao existe{produto_id}')     
      
-"""if __name__ =='__main__':
-    import uvicorn
-    
-    uvicorn.run("main:app", host="127.0.0.1", port=8000, reload=True)
-"""
